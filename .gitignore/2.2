@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+
+int f( int*arr, int first, int last)
+{
+    for (; first<last; ++first)
+    {
+       if( arr[first]%2==0);
+       cout<<arr[first]<<endl;
+    }return false;
+}
+int main ()
+{
+    int array[5]{2,4,8,16,32};
+    cout<<f(array,0,5);
+    return 0;
+}
