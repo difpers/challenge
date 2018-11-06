@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+using BP = bool(*)(int,int);
+bool f( int a, int b)
+{
+return a<b;
+}
+int min_max(int*arr,int first,int last, BP p)
+{
+	int el = arr[first];
+	int index = first;
+	for(; first<last; ++first)
+	{
+	if (p(arr[first],el))
+	{
+	el=arr[first];
+	index=first;
+	}
+	}
+	return index;
+	
+}
+int main() {
+	int array [5]{5,-2,3,9,1};
+	cout<<min_max(array,0,5,f);
+	return 0;
+}
