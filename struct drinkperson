@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double p(int m,int c)
+{
+    return m*c*0.6;
+
+}
+
+struct Drinks
+{
+    std::string m_name;
+    char *percent;
+    char *composition;
+    char *volume;
+    enum mood{sed,urnal,happy};
+};
+
+struct person
+{
+    char *weight;
+    char *eye;
+    char *age;
+    enum race{euro,frank,dollars,rub};
+};
+
+
+int main()
+{
+     cout<<p(61,40)<<endl;
+
+    Drinks whisky1;
+
+    whisky1.percent="40";
+    whisky1.composition="alcohol";
+    whisky1.volume="750";
+
+    cout << "amount of alcohol: " << whisky1.percent <<"%" << endl;
+    cout << "content: " <<  whisky1.composition << endl;
+    cout << "size: " << whisky1.volume <<"ml" << endl;
+
+    person a;
+
+    a.weight="61";
+    a.eye="blue";
+    a.age="31";
+
+    cout << "mass: " << a.weight<<"kg" << endl;
+    cout << "content: " << a.eye  << endl;
+    cout << "male: " << a.age << endl;
+
+
+    return 0;
+}
